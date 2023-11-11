@@ -1,0 +1,54 @@
+body {
+    font-size: medium;
+    color: grey;
+    font-family:  'Arial Narrow Bold';
+}
+
+h1 {
+    font-family: 'Franklin Gothic Medium';
+    color: blue;
+    border: 2px solid pink ;
+    background-color: blueviolet;
+}
+
+h2 {
+    font-family: 'Segoe UI' ;
+    border: 2px solid pink ;
+    background-color: aquamarine;
+}
+
+ol {
+    background-color: darkkhaki;
+}
+
+ol li {
+    color: indianred;
+}
+
+table {
+    font-family: arial, sans-serif;
+    border-collapse: collapse;
+    width: 100%;
+  }
+  
+  td, th {
+    border: 1px solid #dddddd;
+    text-align: center;
+    padding: 8px;
+  }
+  
+  tr:nth-child(even) {
+    background-color: #dddddd;
+  }
+
+#satis {
+    background-color: lightgreen;
+}
+
+.otomobil {
+    background-color: lavender;
+}
+
+.tablolar {
+    color: magenta;
+}

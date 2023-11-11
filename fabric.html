@@ -1,0 +1,74 @@
+<!--
+    Ürün katalogu
+    En üstte de BilgeAdam Java Dersi Fabrikası yazısı gözükecek
+    1. bölüm: üretilen ürünlerin(otomobil, motorsiklet, bisiklet, kamyon) 
+    istesi kullanıcıya gösteren bir bölümdür.Üretilen ürün listesi
+    2. bölüm: ürünlerin modellerini listeleyeck ve onlar hakkında kısaca tanıtımı yapacak(Tablo şeklinde)
+    3. bölümde Yapılan satış listesi gösterilecek
+-->
+
+<!DOCTYPE html>
+<html>
+    <head>
+        <link rel="stylesheet" href="fabric.css">
+    </head>
+    <body>
+        <div>
+            <h1> Bilge Adam JAVA Dersi Fabrikası</h1>
+        </div>
+        <div>
+            <h2>
+                Üretilen Ürünlerin Listesi
+            </h2>
+            <ol style="list-style-type: disc;">
+                <li>Otomobil</li>
+                <li>Motorsiklet</li>
+                <li>Bisiklet</li>
+                <li>Kamyon</li>
+            </ol>
+        </div>
+        <div>
+            <table class="tablolar">
+                <tr>
+                    <th>Ürün</th>
+                    <th>Model</th>
+                    <th>Özellikleri</th>
+                    <th>Liste Fiyat</th>
+                </tr>
+                <tr>
+                    <td class="otomobil">Otomobil</td>
+                    <td>X-Milenium</td>
+                    <td>Yeni Segment Bir araç ve Sessiz yol tutuşu</td>
+                    <td>124000$</td>
+                </tr>
+                <tr>
+                    <td>Motorsiklet</td>
+                    <td>Yatara</td>
+                    <td>Kaza yapmazsanız bir şey olmaz</td>
+                    <td>14700$</td>
+                </tr>
+                <tr>
+                    <td>Bisiklet</td>
+                    <td>PatlakJant</td>
+                    <td>18 Vites ileri gider</td>
+                    <td>4000$</td>
+                </tr>
+                <tr>
+                    <td>Kamyon</td>
+                    <td>200H</td>
+                    <td>20 Tekerlekli Özel üretim</td>
+                    <td>245100$</td>
+                </tr>
+            </table>
+        </div>
+        <div>
+            <h3>Satış Listesi</h3>
+            <ol id="satis">
+                <li>Otomobil -> 100 Adet</li>
+                <li>Kamyon -> 34 Adet</li>
+                <li>Bisiklet -> 345 Adet</li>
+                <li>Motorsiklet -> 378 Adet</li>
+            </ol>
+        </div>
+    </body>
+</html>

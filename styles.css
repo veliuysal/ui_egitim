@@ -1,0 +1,14 @@
+body {background-color: powderblue; }
+h1   {
+    color: greenyellow;
+    font-family: Verdana;
+    font-size: 300%;
+}
+p    {
+    color: red;
+    font-family:  Courier;
+    font-size: 160%;
+    border: 2px solid sandybrown ;
+    padding-left: 300px;
+    margin-left: 100px;
+}
