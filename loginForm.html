@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <style>
+        form {
+            border: 3px solid #f1f1f1;
+            border-radius: 10px;
+            width: 50%;
+            text-align: center;
+            align-items: center;
+            margin: 30% 30% 30% 30%;
+            justify-content: center;
+        }
+
+        label {
+            width: 80%;
+            padding: 12px 20px;
+            margin: 8px 0;
+            display: inline-block;
+            text-align: center;
+            font-weight: bolder;
+            font-size: x-large;
+        }
+
+        input[type=text],
+        input[type=password] {
+            width: 80%;
+            padding: 12px 20px;
+            margin: 8px 0;
+            display: inline-block;
+            border: 1px solid #ccc;
+            box-sizing: border-box;
+            border-radius: 10px;
+        }
+
+        .login {
+            display: inline-block;
+            margin-bottom: 100px;
+            height: 100px;
+        }
+
+        button {
+            width: 20%;
+            height: 50px;
+            background-color: cornflowerblue;
+            color: white;
+            border-radius: 10px;
+            margin-bottom: 20px;
+        }
+
+        select {
+            width: 80%;
+            padding: 12px 20px;
+            margin: 8px 0;
+            display: inline-block;
+            border: 1px solid #ccc;
+            box-sizing: border-box;
+            border-radius: 10px;
+        }
+
+        @media screen and (max-width: 300px) {
+            span.psw {
+                display: block;
+                float: none;
+            }
+
+            .loginButton {
+                width: 100%;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <form class="form">
+        <label>Login</label>
+        <input type="text" placeholder="Username">
+        <input type="password" placeholder="Password">
+        <select>
+            <option>Select Role</option>
+            <option>Student</option>
+            <option>Teacher</option>
+            <option>Admin</option>
+        </select>
+        <div id="login">
+            <input type="checkbox">Remember Me</input>
+            <button type="button" id="loginButton">Login</button>
+        </div>
+
+    </form>
+</body>
