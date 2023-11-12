@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <style>
+        p.center {
+            text-align: center;
+            color: red;
+        }
+
+        .center {
+            font-family: Impact;
+        }
+
+        p.large {
+            font-size: 300%;
+        }
+
+        h1,
+        h6 {
+            text-align: right;
+            color: blueviolet;
+        }
+        div > p {
+            text-align: center;
+            color: aqua;
+        }
+    </style>
+</head>
+
+<body>
+    <h1 class="center">This heading will not be affected</h1>
+    <p class="center">This paragraph will be red and center-aligned.</p>
+    <h6 class="center">This title will not be affected</h6>
+    <p class="center large">This paragraph will be red, center-aligned, and in a large font-size.</p>
+    <div>
+        <p>This paragraph will be red and center-aligned.</p>
+    </div>
+</body>
+
+</html>
