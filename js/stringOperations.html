@@ -12,6 +12,8 @@
     <p id="demo6"></p>
     <p id="demo7">Please visit Microsoft!</p>
     <p id="demo8"></p>
+    <button onclick="myFunction()">Try it</button>
+    <p id="demo9">Hello World!</p>
     <script>
         let text = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
         document.getElementById("demo").innerHTML = text.length;
@@ -40,6 +42,13 @@
         text4 = text4.replaceAll("Cats", "Dogs");
         text4 = text4.replaceAll("cats", "dogs");
         document.getElementById("demo8").innerHTML = text4;
+
+        function myFunction() {
+            let text = document.getElementById("demo9").innerHTML;
+            document.getElementById("demo9").innerHTML =
+                text.toUpperCase();
+        }
+
 
     </script>
 </body>
