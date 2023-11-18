@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+
+<body>
+    <p>The length of the string is:</p>
+    <p id="demo"></p>
+    <p id="demo1"></p>
+    <p id="demo2"></p>
+    <p id="demo3"></p>
+    <p id="demo4"></p>
+    <p id="demo5"></p>
+    <p id="demo6"></p>
+    <p id="demo7">Please visit Microsoft!</p>
+    <p id="demo8"></p>
+    <script>
+        let text = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
+        document.getElementById("demo").innerHTML = text.length;
+
+        let text2 = "Apple, Banana, Kiwi";
+        let part = text2.slice(7, 13);
+        document.getElementById("demo1").innerHTML = part;
+
+        let part2 = text2.slice(7)
+        document.getElementById("demo2").innerHTML = part2;
+
+        let part3 = text2.slice(-12, -6)
+        document.getElementById("demo3").innerHTML = part3;
+
+        document.getElementById("demo4").innerHTML = text2.substring(7, 13);
+
+        document.getElementById("demo5").innerHTML = text2.substr(7);
+
+        document.getElementById("demo6").innerHTML = text2.substr(-4);
+
+        let text3 = document.getElementById("demo7").innerHTML;
+        document.getElementById("demo7").innerHTML =
+            text3.replace("Microsoft", "W3Schools");
+
+        let text4 = "I love cats. Cats are very easy to love. Cats are very popular.";
+        text4 = text4.replaceAll("Cats", "Dogs");
+        text4 = text4.replaceAll("cats", "dogs");
+        document.getElementById("demo8").innerHTML = text4;
+
+    </script>
+</body>
+
+</html>
