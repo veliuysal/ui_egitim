@@ -16,6 +16,9 @@
     <p id="demo9">Hello World!</p>
     <button onclick="myFunction2()">Try it</button>
     <p id="demo10">Hello World!</p>
+
+    <p id="demo11"></p>
+    <p id="demo12"></p>
     <script>
         let text = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
         document.getElementById("demo").innerHTML = text.length;
@@ -56,6 +59,20 @@
             document.getElementById("demo10").innerHTML =
                 text.toLowerCase();
         }
+
+        let str1 = "Hello";
+        let str2 = "World!";
+        let str3 = "JAVA Class";
+        let str4 = str1.concat(" ", str2).concat(" ", str3);
+        document.getElementById("demo11").innerHTML = str4;
+
+        let ifade1 = "     Hello World!      ";
+        let ifade2 = ifade1.trim();
+        let ifade3 = ifade1.trimStart();
+        let ifade4 = ifade1.trimEnd();
+        document.getElementById("demo12").innerHTML =
+            "Length ifade1 = " + ifade1.length + "<br>Length ifade2 = " + ifade2.length
+            + "<br>Length ifade3 = " + ifade3.length + "<br>Length ifade4 = " + ifade4.length;
 
     </script>
 </body>
