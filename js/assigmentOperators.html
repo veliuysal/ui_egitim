@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+
+<body>
+    <h2>JavaScript const</h2>
+    <p>You can NOT reassign a constant object:</p>
+    <p id="demo"></p>
+    <script>
+        let x = 5, y = 3, z = 23, a = 21, b = 7, c = 2;
+        x += 6;
+        y -= 45;
+        z *= -1;
+        a /= 3;
+        b %= 3;
+        c **= 3;
+        document.getElementById("demo").innerHTML = "Toplama İşlemi: " + x + " Çıkarma İşlemi:" + y +
+            " Çarpma İşlemi: " + z + " Bölme İşlemi: " + a + " Mod İşlemi:" + b + " Üs Alma İşlemi: " + c;
+    </script>
+</body>
+
+</html>
