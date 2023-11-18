@@ -14,6 +14,8 @@
     <p id="demo8"></p>
     <button onclick="myFunction()">Try it</button>
     <p id="demo9">Hello World!</p>
+    <button onclick="myFunction2()">Try it</button>
+    <p id="demo10">Hello World!</p>
     <script>
         let text = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
         document.getElementById("demo").innerHTML = text.length;
@@ -49,6 +51,11 @@
                 text.toUpperCase();
         }
 
+        function myFunction2() {
+            let text = document.getElementById("demo10").innerHTML;
+            document.getElementById("demo10").innerHTML =
+                text.toLowerCase();
+        }
 
     </script>
 </body>
