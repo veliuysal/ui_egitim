@@ -9,13 +9,21 @@
             .then(response => response.json())
             .then(data => {
                 let text = "[ <br/>";
-                for (let i = 0; i < data.length; i++) {
+                /*for (let i = 0; i < data.length; i++) {
                     text += '    {<br/>      "userId": ' + data[i].userId + ",<br/>";
                     text += '      "id": ' + data[i].id + ", <br/>";
                     text += '      "title": ' + data[i].title + ", <br/>";
                     text += '      "body": ' + data[i].body + ", <br/>";
                     text += "    }, <br/>";
-                }
+                }*/
+
+                data.forEach(element => {
+                    text += '    {<br/>      "userId": ' + element.userId + ",<br/>";
+                    text += '      "id": ' + element.id + ", <br/>";
+                    text += '      "title": ' + element.title + ", <br/>";
+                    text += '      "body": ' + element.body + ", <br/>";
+                    text += "    }, <br/>";
+                });
                 document.getElementById("demo").innerHTML = text + " <br/>]";
             })
             .catch(error => {
