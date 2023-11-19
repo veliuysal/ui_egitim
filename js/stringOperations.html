@@ -19,6 +19,12 @@
 
     <p id="demo11"></p>
     <p id="demo12"></p>
+    <hr>
+    <p id="demo13"></p>
+    <p id="demo14"></p>
+    <p id="demo15"></p>
+    <p id="demo16"></p>
+    <p id="demo17"></p>
     <script>
         let text = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
         document.getElementById("demo").innerHTML = text.length;
@@ -74,6 +80,28 @@
             "Length ifade1 = " + ifade1.length + "<br>Length ifade2 = " + ifade2.length
             + "<br>Length ifade3 = " + ifade3.length + "<br>Length ifade4 = " + ifade4.length;
 
+        let splitText = "a,b,c,d,e,f";
+        const splittedArray = splitText.split("-");
+        document.getElementById("demo13").innerHTML = splittedArray[0] + " length: " + splittedArray.length;
+
+        let locate = "Please locate where 'locate' occurs!";
+        let index = locate.indexOf("locate");
+        document.getElementById("demo14").innerHTML = index;
+
+        let firstName = "John";
+        let lastName = "Doe";
+        let fullName = `Welcome ${firstName}, ${lastName}!`;
+        document.getElementById("demo15").innerHTML = fullName;
+
+        let price = 10;
+        let VAT = 0.25;
+        let total = `Total: ${(price * (1 + VAT)).toFixed(2)}`;
+        document.getElementById("demo16").innerHTML = total;
+
+        `${callMe()}`;
+        function callMe() {
+            document.getElementById("demo17").innerHTML = "Hello World CallMe!";
+        }
     </script>
 </body>
 
