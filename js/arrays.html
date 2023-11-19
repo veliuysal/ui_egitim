@@ -15,6 +15,13 @@
 
     <button onclick="removeFunction()">Remove Lemon</button>
     <p id="demo9"></p>
+    <p id="demo10"></p>
+    <p id="demo11"></p>
+    <p id="demo12"></p>
+    <p id="demo13"></p>
+    <p id="demo14"></p>
+    <p id="demo15"></p>
+    <p id="demo16"></p>
     <script>
         const cars1 = ["Saab", "Volvo", "BMW"];
         document.getElementById("demo1").innerHTML = "Cars 1: " + cars1;
@@ -31,7 +38,7 @@
         const cars4 = ["Saab", "Volvo", "BMW"];
         document.getElementById("demo4").innerHTML = "Cars 4: " + cars4[0];
 
-        const fruits = ["Banana", "Orange", "Apple", "Mango"];
+        const fruits = ["Banana", "Orange", "Apple", "Mango", "Berry", "Avacado", "Blackberry"];
         document.getElementById("demo5").innerHTML = fruits.toString();
 
         let fLen = fruits.length;
@@ -58,6 +65,38 @@
         function removeFunction() {
             fruits.pop();
             document.getElementById("demo9").innerHTML = fruits;
+        }
+
+        const citrus = fruits.slice(1);
+        document.getElementById("demo10").innerHTML = fruits + "<br><br>" + citrus;
+
+        fruits.sort();
+        document.getElementById("demo11").innerHTML = fruits;
+
+        fruits.reverse();
+        document.getElementById("demo12").innerHTML = fruits;
+
+        const points = [40, 100, 1, 5, 25, 10];
+        //points.sort();
+        points.sort(function (a, b) { return a - b });
+        document.getElementById("demo13").innerHTML = points;
+
+        const numbers1 = [45, 4, 9, 16, 25];
+        const numbers2 = numbers1.map(myFunction);
+        document.getElementById("demo14").innerHTML = numbers2;
+        function myFunction(value, index, array) {
+            return value * 2;
+        }
+
+        const myArr = [1, 2, 3, 4, 5, 6];
+        const newArr = myArr.flatMap((x) => x * 2);
+        document.getElementById("demo15").innerHTML = newArr;
+
+        const numbers = [45, 4, 9, 16, 25];
+        const over18 = numbers.filter(myFunction);
+        document.getElementById("demo16").innerHTML = over18;
+        function myFunction(value, index, array) {
+            return value > 18;
         }
     </script>
 </body>
