@@ -1,16 +1,65 @@
-
 <!DOCTYPE html>
 <html>
 
 <body>
-    <p id="demo"></p>
-<script>
-const cars = [];
-cars[0] = "Saab";
-cars[1] = "Volvo";
-cars[2] = "BMW";
-document.getElementById("demo18").innerHTML = cars;
-</script>
+    <p id="demo1"></p>
+    <p id="demo2"></p>
+    <p id="demo3"></p>
+    <p id="demo4"></p>
+    <p id="demo5"></p>
+    <p id="demo6"></p>
+    <p id="demo7"></p>
+
+    <button onclick="addFunction()">Add Lemon</button>
+    <p id="demo8"></p>
+
+    <button onclick="removeFunction()">Remove Lemon</button>
+    <p id="demo9"></p>
+    <script>
+        const cars1 = ["Saab", "Volvo", "BMW"];
+        document.getElementById("demo1").innerHTML = "Cars 1: " + cars1;
+
+        const cars2 = [];
+        cars2[0] = "Saab";
+        cars2[1] = "Volvo";
+        cars2[2] = "BMW";
+        document.getElementById("demo2").innerHTML = "Cars 2: " + cars2;
+
+        const cars3 = new Array("Saab", "Volvo", "BMW");
+        document.getElementById("demo3").innerHTML = "Cars 3: " + cars3;
+
+        const cars4 = ["Saab", "Volvo", "BMW"];
+        document.getElementById("demo4").innerHTML = "Cars 4: " + cars4[0];
+
+        const fruits = ["Banana", "Orange", "Apple", "Mango"];
+        document.getElementById("demo5").innerHTML = fruits.toString();
+
+        let fLen = fruits.length;
+        let text = "<ul>";
+        for (let i = 0; i < fLen; i++) {
+            text += "<li>" + fruits[i] + "</li>";
+        }
+        text += "</ul>";
+        document.getElementById("demo6").innerHTML = text;
+
+        let text2 = "<ul>";
+        fruits.forEach(myFunction);
+        text2 += "</ul>";
+        document.getElementById("demo7").innerHTML = text2;
+        function myFunction(value) {
+            text2 += "<li>" + value + "</li>";
+        }
+
+        function addFunction() {
+            fruits.push("Lemon");
+            document.getElementById("demo8").innerHTML = fruits;
+        }
+
+        function removeFunction() {
+            fruits.pop();
+            document.getElementById("demo9").innerHTML = fruits;
+        }
+    </script>
 </body>
 
 </html>
