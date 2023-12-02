@@ -19,25 +19,26 @@ function updateTable(data) {
 
     const tableBody = document.getElementById('table-body');
     const row = document.createElement('tr');
-    row.innerHTML = `
+   /* row.innerHTML = `
       <td>${data.id}</td>
       <td>${data.brand}</td>
       <td>${data.model}</td>
       <td>${data.year}</td>
     `;
 
-    tableBody.appendChild(row);
+    tableBody.appendChild(row);*/
 
     // API'den gelen verileri döngü ile tabloya ekleyin
-    /*   data.forEach(item => {
+       data.forEach(item => {
            const row = document.createElement('tr');
            row.innerHTML = `
          <td>${item.id}</td>
-         <td>${item.name}</td>
-         <td>${item.price}</td>
+         <td>${item.brand}</td>
+         <td>${item.model}</td>
+         <td>${item.year}</td>
        `;
    
            tableBody.appendChild(row);
-       });*/
+       });
 }
 
