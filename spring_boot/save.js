@@ -1,8 +1,8 @@
 
-function saveCar(){
-var brand=document.getElementById('brand').value;
-var model=document.getElementById('model').value;
-var year=document.getElementById('year').value;
+function saveCar() {
+    var brand = document.getElementById('brand').value;
+    var model = document.getElementById('model').value;
+    var year = document.getElementById('year').value;
 
     fetch('http://localhost:8080/api/car', {
         method: 'POST',
@@ -14,5 +14,26 @@ var year=document.getElementById('year').value;
         headers: {
             'Content-type': 'application/json; charset=UTF-8',
         },
-    });
+    }).then((response) => {
+        if (!response.ok) {
+            throw new Error('Gönderi oluşturma başarısız. Durum Kodu: ' + response.status);
+        }
+        return response.json();
+    }).then((json) => {
+        console.log('Oluşturulan Gönderi:', json);
+        // İsteği başarıyla tamamladığınızı kullanıcıya bildirebilirsiniz
+        alert('Gönderi başarıyla oluşturuldu!');
+        // Formu temizle
+        clearSaveForm();
+    })
+        .catch((error) => {
+            console.error(error);
+        });
+}
+
+
+function clearSaveForm() {
+    document.getElementById('brand').value = '';
+    document.getElementById('model').value = '';
+    document.getElementById('year').value = '';
 }
