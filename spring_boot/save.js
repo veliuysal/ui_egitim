@@ -16,11 +16,9 @@ function saveCar() {
         },
     }).then(async (response) => {
         if (!response.ok) {
-            alert(response.body);
-            let json= await response.json
-            console.log(json)
+            let errorMsg = await response.text();
+            alert(errorMsg);
             throw new Error('Gönderi oluşturma başarısız. Durum Kodu: ' + response.status);
-
         }
         return response.json();
     }).then((json) => {
