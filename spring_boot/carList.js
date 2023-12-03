@@ -14,21 +14,9 @@ fetch("http://localhost:8080/api/car/all")
 
 
 function updateTable(data) {
-    console.log("response :" + data)
-    console.log("response :" + data.id)
-
     const tableBody = document.getElementById('table-body');
     const row = document.createElement('tr');
-    /* row.innerHTML = `
-       <td>${data.id}</td>
-       <td>${data.brand}</td>
-       <td>${data.model}</td>
-       <td>${data.year}</td>
-     `;
- 
-     tableBody.appendChild(row);*/
-
-    // API'den gelen verileri döngü ile tabloya ekleyin
+    
     data.forEach(item => {
         const row = document.createElement('tr');
         row.innerHTML = `
@@ -36,16 +24,19 @@ function updateTable(data) {
          <td>${item.brand}</td>
          <td>${item.model}</td>
          <td>${item.year}</td>
-         <td>
-         <button onclick="guncelle( ${item} )">Güncelle</button>
-         </td>
        `;
+
+        var guncelleBtn = document.createElement("button");
+        guncelleBtn.innerHTML = "Güncelle";
+        guncelleBtn.onclick = function () {
+            document.getElementById('saveCar').innerHTML = 'Araba Güncelle';
+            console.log("Güncelle", item)
+        }
+        guncelleBtn.type = "button";
+        row.appendChild(guncelleBtn);
 
         tableBody.appendChild(row);
     });
 }
 
-function guncelle(item) {
-    console.log("Güncelle", item)
-}
 
