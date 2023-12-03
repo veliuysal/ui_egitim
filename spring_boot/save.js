@@ -14,9 +14,13 @@ function saveCar() {
         headers: {
             'Content-type': 'application/json; charset=UTF-8',
         },
-    }).then((response) => {
+    }).then(async (response) => {
         if (!response.ok) {
+            alert(response.body);
+            let json= await response.json
+            console.log(json)
             throw new Error('Gönderi oluşturma başarısız. Durum Kodu: ' + response.status);
+
         }
         return response.json();
     }).then((json) => {
