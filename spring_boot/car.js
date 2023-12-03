@@ -30,18 +30,23 @@ function updateTable(data) {
         guncelleBtn.innerHTML = "Güncelle";
         guncelleBtn.onclick = function () {
             document.getElementById('saveCar').innerHTML = 'Araba Güncelle';
-            document.getElementById('arabaFromTitle').innerHTML = 'Araba Güncelleme Formu'; 
+            document.getElementById('arabaFromTitle').innerHTML = 'Araba Güncelleme Formu';
             document.getElementById('brand').value = item.brand;
             document.getElementById('model').value = item.model;
             document.getElementById('year').value = item.year;
-            
-            
+            document.getElementById('saveCar').className= 'updateCar';
         }
         guncelleBtn.type = "button";
         row.appendChild(guncelleBtn);
 
         tableBody.appendChild(row);
     });
+}
+
+function carOperations(button) {
+    if (button.className === 'saveCar')
+        saveCar();
+    updateCar();
 }
 
 function updateCar() {
